@@ -1,4 +1,4 @@
-vim.opt.guicursor = ""
+--vim.opt.guicursor = ""
 vim.opt.nu = true
 
 vim.opt.relativenumber = true
@@ -11,7 +11,6 @@ vim.g.netrw_banner = 0
 vim.g.netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 vim.g.netrw_altv = 1
 vim.g.netrw_winsize = 50
-
 vim.g.neoformat_try_node_exe = 1
 vim.opt.smartindent = true
 vim.opt.wrap = true 

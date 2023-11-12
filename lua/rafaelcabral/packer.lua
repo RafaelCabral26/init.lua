@@ -25,7 +25,7 @@ use ({
         "rebelot/kanagawa.nvim",
         as = 'kanagawa',
         config = function()
-        vim.cmd('colorscheme kanagawa')
+        vim.cmd('colorscheme kanagawa-lotus')
         end
     })
  use ('nvim-treesitter/nvim-treesitter', {run =  ':TSUpdate'})
@@ -43,11 +43,11 @@ use ({
     {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
     -- Autocompletion
+    {'saadparwaiz1/cmp_luasnip'}, -- Optional
     {'hrsh7th/nvim-cmp'},         -- Required
     {'hrsh7th/cmp-nvim-lsp'},     -- Required
     {'hrsh7th/cmp-buffer'},       -- Optional
     {'hrsh7th/cmp-path'},         -- Optional
-    {'saadparwaiz1/cmp_luasnip'}, -- Optional
     {'hrsh7th/cmp-nvim-lua'},     -- Optional
 
     -- Snippets
@@ -65,9 +65,6 @@ use({
 	end,
 })
 
-use {"akinsho/toggleterm.nvim", tag = '*', config = function()
-  require("toggleterm").setup()
-end}
 use {
 	"windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end
@@ -86,11 +83,7 @@ use {'mfussenegger/nvim-dap-python'}
 use {'Pocco81/DAPInstall.nvim'}
     use{'rcarriga/nvim-dap-ui', requires = {"mfussenegger/nvim-dap"}}
             use{"theHamsta/nvim-dap-virtual-text"}
-    use {
-  "microsoft/vscode-js-debug",
-  opt = true,
-  run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out" 
-}
+    use {'christoomey/vim-tmux-navigator'} --tmux and split window navigation
     use { "mxsdev/nvim-dap-vscode-js", requires = {"mfussenegger/nvim-dap"} }
 end)
 

@@ -20,6 +20,10 @@ require('lualine').setup {
   sections = {
           lualine_a = {
       { 'mode', separator = { left = '' }, right_padding = 2 },
+            {
+      'filename',
+      path = 4 -- 0 = just filename, 1 = relative path, 2 = absolute path
+    },
     },
     lualine_b = { 'filename', 'branch' },
     lualine_c = { 'fileformat' },

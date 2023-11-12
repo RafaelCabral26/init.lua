@@ -5,6 +5,7 @@ vim.keymap.set('n', '<leader>fg', function()
 	builtin.grep_string({ search = vim.fn.input("Grep > ") })
 end)
 vim.keymap.set('n', '<leader>fw', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fr', builtin.registers, {})
 
 require('telescope').setup{
     defaults = {
